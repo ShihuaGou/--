@@ -1,0 +1,15 @@
+torch
+transformers
+accelerate
+bitsandbytes
+faiss-cpu
+sentence-transformers
+pydantic
+lz4
+psutil
+datasets
+modelscope
+peft
+trl
+fastapi
+uvicorn
