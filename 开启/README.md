@@ -14,9 +14,11 @@
 - `agent/`
   - `config.py`：模型与系统配置
   - `model_loader.py`：模型与 tokenizer 加载器
-  - `memory.py`：记忆存储与检索模块
+  - `memory.py`：记忆存储与检索模块（已实现UnifiedLowLevelSemanticMemory）
   - `agent_core.py`：代理主逻辑
 - `app.py`：FastAPI 服务入口
+- `test_memory.py`：记忆模块测试
+- `test_model.py`：模型加载测试
 - `requirements.txt`：依赖列表
 - `setup_env.ps1`：Windows/WSL 环境安装脚本
 
@@ -39,6 +41,28 @@ curl -X POST "http://127.0.0.1:8000/query" -H "Content-Type: application/json" -
 ## 依赖
 
 参见 `requirements.txt`
+
+## 当前实现状态
+
+✅ **已完成**：
+- 双模态统一底层语义记忆 (ULSM) 模块
+- 结构化知识图谱与三元组存储
+- 分层记忆管理（短期/热长期/冷长期）
+- LZ4 压缩与 FAISS 向量检索
+- 记忆重要性评分与保护机制
+- 经验蒸馏与结构化推理轨迹存储
+
+🔄 **进行中**：
+- 多智能体调度与推理分布对齐
+- MIRA (记忆引导推理对齐) 机制
+- 强/弱智能体联合推理
+
+## 测试
+
+运行记忆模块测试：
+```bash
+python test_memory.py
+```
 
 ## 注意
 

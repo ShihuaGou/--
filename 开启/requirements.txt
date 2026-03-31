@@ -2,7 +2,7 @@ torch
 transformers
 accelerate
 bitsandbytes
-faiss-cpu
+faiss-gpu
 sentence-transformers
 pydantic
 lz4
